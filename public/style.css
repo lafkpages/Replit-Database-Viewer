@@ -1,0 +1,127 @@
+*
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button, input[type=button], input[type=submit]
+{
+  cursor: pointer;
+}
+
+input, button
+{
+  border: 2px solid gainsboro;
+  border-radius: 0px;
+
+  font-size: 20px;
+
+  padding: 5px;
+}
+
+table#data
+{
+  margin-top: 20px;
+}
+
+table#data th, table#data td
+{
+  padding: 5px;
+}
+
+table#data, table#data td, table#data th
+{
+  border: 2px solid lightgrey;
+  border-collapse: collapse;
+}
+
+table#data td button
+{
+  font-size: 16px;
+}
+
+table#data td button.actions-edit::before
+{
+  content: 'Edit';
+}
+
+table#data td button.actions-delete
+{
+  margin-left: 5px;
+
+  background: salmon;
+}
+
+table#data td button.actions-delete::before
+{
+  content: 'Delete';
+}
+
+div#other-actions
+{
+  margin-top: 20px;
+}
+
+div#other-actions button#clear-db
+{
+  background: salmon;
+}
+
+div#edit-prompt
+{
+  background: white;
+
+  padding: 20px;
+
+  margin: 25vh 25vw;
+}
+
+div#edit-prompt-container
+{
+  display: none;
+
+  position: fixed;
+
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+div#edit-prompt-container.show
+{
+  display: unset;
+}
+
+div#edit-prompt span
+{
+  font-size: xx-small;
+
+  margin: 0px;
+  padding: 0px;
+
+  line-height: 0;
+}
+
+div#edit-prompt textarea
+{
+  width: 100%;
+  height: calc(70% - 4px);
+
+  margin: 2px 0px;
+
+  border: 2px solid gainsboro;
+
+  outline: none;
+}
+
+div#edit-prompt button
+{
+  height: 25%;
+}
+
+div#edit-prompt button#edit-prompt-ok
+{
+  background: lightskyblue;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Replit Database Viewer</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="db.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form id="enter-url">
+      <input type="url" name="url">
+
+      <input type="submit" value="Load database">
+    </form>
+
+    <table id="data">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        
+      </tbody>
+    </table>
+
+    <div id="other-actions">
+      <button id="new-key">New item</button>
+      <button id="clear-db">Clear database</button>
+    </div>
+
+    <div id="edit-prompt-container">
+      <div id="edit-prompt">
+        <span>
+          <strong>Note:</strong>
+          &nbsp;
+          whatever you write there is treated as raw data,
+          so if you want to type a string, you have to
+          manually quote it, like this:
+          &nbsp;
+          <code>&quot;string&quot;</code>
+        </span>
+
+        <textarea></textarea>
+
+        <br>
+
+        <button id="edit-prompt-cancel">Cancel</button>
+        <button id="edit-prompt-ok">Ok</button>
+      </div>
+    </div>
+  </body>
+</html>
