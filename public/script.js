@@ -19,6 +19,8 @@ let db = new DB();
 let editing_key = null;
 let editing = null;
 
+const parsedUrl = new URL(location.href);
+
 enter_url_form.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -171,3 +173,12 @@ clear_db_btn.addEventListener('click', e => {
     }
   });
 });
+
+// get DB url from search params
+if (parsedUrl.searchParams.has('url')) {
+  // enter URL into input
+  enter_url_inp.value = atob(parsedUrl.searchParams.get('url'));
+
+  // submit
+  enter_url_subm.click();
+}
