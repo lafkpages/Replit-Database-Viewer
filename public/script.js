@@ -26,6 +26,9 @@ enter_url_form.addEventListener('submit', e => {
 
   db.setURL(enter_url_inp.value);
 
+  // save URL temporarily
+  sessionStorage.setItem('url', enter_url_inp.value);
+
   data_table.innerHTML = '';
 
   db.list()
@@ -178,6 +181,15 @@ clear_db_btn.addEventListener('click', e => {
 if (parsedUrl.searchParams.has('url')) {
   // enter URL into input
   enter_url_inp.value = atob(parsedUrl.searchParams.get('url'));
+
+  // submit
+  enter_url_subm.click();
+}
+
+// get DB url from sessionStorage
+else if (sessionStorage.getItem('url')) {
+  // enter URL into input
+  enter_url_inp.value = sessionStorage.getItem('url');
 
   // submit
   enter_url_subm.click();
