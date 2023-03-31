@@ -18,6 +18,10 @@ input, button
   padding: 5px;
 }
 
+button#replitAuthBtn {
+  margin-bottom: 20px;
+}
+
 table#data
 {
   margin-top: 20px;

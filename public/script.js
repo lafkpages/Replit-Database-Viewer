@@ -1,3 +1,5 @@
+const replit_auth_btn = document.querySelector('button#replitAuthBtn');
+
 const enter_url_form = document.querySelector('form#enter-url');
 const enter_url_inp = enter_url_form.elements['url'];
 const enter_url_subm = enter_url_form.querySelector('input[type=submit]');
@@ -194,3 +196,8 @@ else if (sessionStorage.getItem('url')) {
   // submit
   enter_url_subm.click();
 }
+
+// Login with Replit button
+replit_auth_btn.addEventListener('click', e => {
+  LoginWithReplit();
+});
