@@ -39,21 +39,26 @@ enter_url_form.addEventListener('submit', e => {
     {
       db.get(key, true)
       .then(val => {
+        let parsedVal = null;
+
         const tr = document.createElement('tr');
 
         const td1 = document.createElement('td');
         td1.className = 'data-key';
         td1.dataset.key = key;
 
-        if (typeof key == 'string')
         td1.innerText = '\"' + key + '\"';
-
-        else
-        td1.innerText = key;
 
         const td2 = document.createElement('td');
         td2.className = 'data-value';
-        td2.innerText = val;
+
+        try {
+          parsedVal = JSON.parse(val);
+          td2.innerText = JSON.stringify(parsedVal, null, 2);
+        } catch {
+          td2.innerText = val;
+          td2.classList.add('data-invalid');
+        }
 
         const td3 = document.createElement('td');
         td3.className = 'data-actions';

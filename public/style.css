@@ -30,12 +30,17 @@ table#data
 table#data th, table#data td
 {
   padding: 5px;
+  white-space: pre-wrap;
 }
 
 table#data, table#data td, table#data th
 {
   border: 2px solid lightgrey;
   border-collapse: collapse;
+}
+
+table#data td.data-invalid {
+  background-color: #FF00000F;
 }
 
 table#data td button
