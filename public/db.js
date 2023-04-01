@@ -53,14 +53,19 @@ class DB
 
   _set_url(key, val)
   {
-    return `/db/set?url=${btoa(this.url)}&key=${btoa(key)}&val=${btoa(JSON.stringify(val))}`;
+    return `/db/set?url=${btoa(this.url)}&key=${btoa(key)}&val=${btoa(val)}`;
   }
 
-  async set(key, val)
+  async set(key, val, raw=false)
   {
     this._URLError();
 
-    let resp = await fetch(this._set_url(key, val));
+    let resp = await fetch(this._set_url(
+      key,
+      raw?
+        val :
+        JSON.stringify(val)
+    ));
 
     if (resp.status == 200)
     {

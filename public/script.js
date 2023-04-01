@@ -107,7 +107,7 @@ document.addEventListener('click', e => {
   {
     if (editing == 'data')
     {
-      db.set(editing_key, edit_prompt_txt.value)
+      db.set(editing_key, edit_prompt_txt.value, true)
       .then(() => {
         edit_prompt_container.classList.remove('show');
 
