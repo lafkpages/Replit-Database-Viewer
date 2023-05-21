@@ -20,7 +20,7 @@ const edit_prompt_cancel = edit_prompt.querySelector(
   "button#edit-prompt-cancel"
 );
 
-const isReplitExtension = /^extension-.+\.(repl\.co|replit\.app)$/.test(
+let isReplitExtension = /^extension-.+\.repl\.co$/.test(
   window.location.hostname
 );
 
@@ -194,4 +194,11 @@ else {
 // Login with Replit button
 replit_auth_btn.addEventListener("click", (e) => {
   LoginWithReplit();
+});
+
+// Check if is in a Replit Extension
+replit.replDb.get('__replit_database_viewer_ext_check').then(resp => {
+  isReplitExtension = typeof resp == 'string';
+
+  console.debug('Is Replit extension:', isReplitExtension);
 });
