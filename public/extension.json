@@ -1,0 +1,12 @@
+{
+  "name": "Replit Database Viewer",
+  "description": "View and edit a Repl's database.",
+  "icon": "favicon96.png",
+  "longDescription": "View and edit a Repl's database.",
+  "coverImages": [
+    {
+      "path": "replit-db-viewer.png",
+      "label": "Replit Database Viewer screenshot"
+    }
+  ]
+}
