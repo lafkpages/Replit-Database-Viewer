@@ -1,64 +1,107 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Replit Database Viewer</title>
 
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <!-- Repl Auth -->
-    <script src="https://replit.com/public/js/repl-auth-v2.js" defer async></script>
+    <script
+      src="https://replit.com/public/js/repl-auth-v2.js"
+      defer
+      async
+    ></script>
 
     <script src="db.js"></script>
     <script src="script.js" defer></script>
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="https://replit-database-viewer.luisafk.repl.co/favicon.png" type="image/png" sizes="16x16 32x32 48x48 64x64 75x75">
-    <link rel="shortcut icon" href="https://replit-database-viewer.luisafk.repl.co/favicon96.png" type="image/png" sizes="96x96">
-    <link rel="shortcut icon" href="https://replit-database-viewer.luisafk.repl.co/favicon512.png" type="image/png" sizes="256x256 512x512">
+    <link
+      rel="shortcut icon"
+      href="https://replit-database-viewer.luisafk.repl.co/favicon.png"
+      type="image/png"
+      sizes="16x16 32x32 48x48 64x64 75x75"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://replit-database-viewer.luisafk.repl.co/favicon96.png"
+      type="image/png"
+      sizes="96x96"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://replit-database-viewer.luisafk.repl.co/favicon512.png"
+      type="image/png"
+      sizes="256x256 512x512"
+    />
 
     <!-- app info -->
-    <meta name="author" content="LuisAFK">
-    <meta name="application-name" content="Replit Database Viewer">
-    <meta name="msapplication-tooltip" content="Replit Database Viewer - View and edit a Repl's database." />
-    <meta name="msapplication-starturl" content="https://replit-database-viewer.luisafk.repl.co" />
+    <meta name="author" content="LuisAFK" />
+    <meta name="application-name" content="Replit Database Viewer" />
+    <meta
+      name="msapplication-tooltip"
+      content="Replit Database Viewer - View and edit a Repl's database."
+    />
+    <meta
+      name="msapplication-starturl"
+      content="https://replit-database-viewer.luisafk.repl.co"
+    />
     <meta name="msapplication-window" content="width=800;height=600" />
     <meta name="msapplication-navbutton-color" content="orange" />
-    <meta name="description" content="View and edit a Repl's database.">
-    <meta property="og:title" content="Replit Database Viewer">
-    <meta property="og:description" content="View and edit a Repl's database.">
+    <meta name="description" content="View and edit a Repl's database." />
+    <meta property="og:title" content="Replit Database Viewer" />
+    <meta
+      property="og:description"
+      content="View and edit a Repl's database."
+    />
 
     <!-- app screenshot -->
-    <meta property="og:image" content="https://replit-database-viewer.luisafk.repl.co/favicon96.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="Database icon">
-    <meta property="og:image:width" content="96">
-    <meta property="og:image:height" content="96">
+    <meta
+      property="og:image"
+      content="https://replit-database-viewer.luisafk.repl.co/favicon96.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Database icon" />
+    <meta property="og:image:width" content="96" />
+    <meta property="og:image:height" content="96" />
 
     <!-- keywords for indexing -->
-    <meta name="keywords" content="database, db, replit, edit, editor, view, viewer, interface, ui, gui, admin, panel">
-  
+    <meta
+      name="keywords"
+      content="database, db, replit, edit, editor, view, viewer, interface, ui, gui, admin, panel"
+    />
+
     <!-- avoid duplicate URLs -->
-    <link rel="canonical" href="https://replit-database-viewer.luisafk.repl.co">
-    <meta property="og:url" content="https://replit-database-viewer.luisafk.repl.co">
-  
+    <link
+      rel="canonical"
+      href="https://replit-database-viewer.luisafk.repl.co"
+    />
+    <meta
+      property="og:url"
+      content="https://replit-database-viewer.luisafk.repl.co"
+    />
+
     <!-- short URLs -->
-    <link rel="shortlink" href="https://ae0.repl.co/db">
-    <link rel="shortlink" href="https://ae0.repl.co/dbv">
+    <link rel="shortlink" href="https://ae0.repl.co/db" />
+    <link rel="shortlink" href="https://ae0.repl.co/dbv" />
 
     <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="YEeb-Zs42URLgjLoTyMvTgl4a289kbtclLir9tk-SfM" />
+    <meta
+      name="google-site-verification"
+      content="YEeb-Zs42URLgjLoTyMvTgl4a289kbtclLir9tk-SfM"
+    />
   </head>
   <body>
     <button id="replitAuthBtn">Login with Replit</button>
 
-    <br>
+    <br />
 
     <form id="enter-url">
-      <input type="url" name="url">
+      <input type="url" name="url" />
 
-      <input type="submit" value="Load database">
+      <input type="submit" value="Load database" />
     </form>
 
     <table id="data">
@@ -70,9 +113,7 @@
         </tr>
       </thead>
 
-      <tbody>
-        
-      </tbody>
+      <tbody></tbody>
     </table>
 
     <div id="other-actions">
@@ -84,17 +125,14 @@
       <div id="edit-prompt">
         <span>
           <strong>Note:</strong>
-          &nbsp;
-          whatever you write there is treated as raw data,
-          so if you want to type a string, you have to
-          manually quote it, like this:
-          &nbsp;
+          &nbsp; whatever you write there is treated as raw data, so if you want
+          to type a string, you have to manually quote it, like this: &nbsp;
           <code>&quot;string&quot;</code>
         </span>
 
         <textarea></textarea>
 
-        <br>
+        <br />
 
         <button id="edit-prompt-cancel">Cancel</button>
         <button id="edit-prompt-ok">Ok</button>

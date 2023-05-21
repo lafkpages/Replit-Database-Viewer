@@ -1,15 +1,15 @@
-*
-{
+* {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-button, input[type=button], input[type=submit]
-{
+button,
+input[type="button"],
+input[type="submit"] {
   cursor: pointer;
 }
 
-input, button
-{
+input,
+button {
   border: 2px solid gainsboro;
   border-radius: 0px;
 
@@ -22,61 +22,54 @@ button#replitAuthBtn {
   margin-bottom: 20px;
 }
 
-table#data
-{
+table#data {
   margin-top: 20px;
 }
 
-table#data th, table#data td
-{
+table#data th,
+table#data td {
   padding: 5px;
   white-space: pre-wrap;
 }
 
-table#data, table#data td, table#data th
-{
+table#data,
+table#data td,
+table#data th {
   border: 2px solid lightgrey;
   border-collapse: collapse;
 }
 
 table#data td.data-invalid {
-  background-color: #FF00000F;
+  background-color: #ff00000f;
 }
 
-table#data td button
-{
+table#data td button {
   font-size: 16px;
 }
 
-table#data td button.actions-edit::before
-{
-  content: 'Edit';
+table#data td button.actions-edit::before {
+  content: "Edit";
 }
 
-table#data td button.actions-delete
-{
+table#data td button.actions-delete {
   margin-left: 5px;
 
   background: salmon;
 }
 
-table#data td button.actions-delete::before
-{
-  content: 'Delete';
+table#data td button.actions-delete::before {
+  content: "Delete";
 }
 
-div#other-actions
-{
+div#other-actions {
   margin-top: 20px;
 }
 
-div#other-actions button#clear-db
-{
+div#other-actions button#clear-db {
   background: salmon;
 }
 
-div#edit-prompt
-{
+div#edit-prompt {
   background: white;
 
   padding: 20px;
@@ -84,8 +77,7 @@ div#edit-prompt
   margin: 25vh 25vw;
 }
 
-div#edit-prompt-container
-{
+div#edit-prompt-container {
   display: none;
 
   position: fixed;
@@ -98,13 +90,11 @@ div#edit-prompt-container
   background: rgba(0, 0, 0, 0.2);
 }
 
-div#edit-prompt-container.show
-{
+div#edit-prompt-container.show {
   display: unset;
 }
 
-div#edit-prompt span
-{
+div#edit-prompt span {
   font-size: xx-small;
 
   margin: 0px;
@@ -113,8 +103,7 @@ div#edit-prompt span
   line-height: 0;
 }
 
-div#edit-prompt textarea
-{
+div#edit-prompt textarea {
   width: 100%;
   height: calc(70% - 4px);
 
@@ -125,12 +114,10 @@ div#edit-prompt textarea
   outline: none;
 }
 
-div#edit-prompt button
-{
+div#edit-prompt button {
   height: 25%;
 }
 
-div#edit-prompt button#edit-prompt-ok
-{
+div#edit-prompt button#edit-prompt-ok {
   background: lightskyblue;
 }
