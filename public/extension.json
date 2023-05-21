@@ -17,5 +17,15 @@
       "handler": "/",
       "icon": "favicon96.png"
     }
+  ],
+  "scopes": [
+    {
+      "name": "repldb:read",
+      "reason": "To read your Repl's database"
+    },
+    {
+      "name": "repldb:write",
+      "reason": "To edit your Repl's database"
+    }
   ]
 }
