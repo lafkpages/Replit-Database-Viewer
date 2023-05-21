@@ -31,7 +31,7 @@ enter_url_form.addEventListener('submit', e => {
   // save URL temporarily
   sessionStorage.setItem('url', enter_url_inp.value);
 
-  data_table.innerHTML = '';
+  data_table.textContent = '';
 
   db.list()
   .then(keys => {
