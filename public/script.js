@@ -204,13 +204,13 @@ replit.replDb.get("").then((resp) => {
 
   if (isReplitExtension) {
     db.replit = replit;
+
+    // reload table
+    enter_url_form.dispatchEvent(new Event("submit"));
+  
+    // hide URL input etc
+    document.body.classList.add("replit-extension");
   }
-
-  // reload table
-  enter_url_form.dispatchEvent(new Event("submit"));
-
-  // hide URL input etc
-  document.body.classList.add("replit-extension");
 
   console.debug("Is Replit extension:", isReplitExtension);
 });
