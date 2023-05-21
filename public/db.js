@@ -8,6 +8,8 @@ class DBError extends Error {
 class DB {
   constructor(url = null) {
     if (url) this.setURL(url);
+
+    this.backend = 'https://replit-database-viewer.luisafk.repl.co/db';
   }
 
   setURL(url) {
@@ -19,7 +21,7 @@ class DB {
   }
 
   _get_url(key) {
-    return `/db/get?url=${btoa(this.url)}&key=${btoa(key)}`;
+    return `${this.backend}/get?url=${btoa(this.url)}&key=${btoa(key)}`;
   }
 
   async get(key, raw = false) {
@@ -36,7 +38,7 @@ class DB {
   }
 
   _set_url(key, val) {
-    return `/db/set?url=${btoa(this.url)}&key=${btoa(key)}&val=${btoa(val)}`;
+    return `${this.backend}/set?url=${btoa(this.url)}&key=${btoa(key)}&val=${btoa(val)}`;
   }
 
   async set(key, val, raw = false) {
@@ -52,7 +54,7 @@ class DB {
   }
 
   _delete_url(key) {
-    return `/db/del?url=${btoa(this.url)}&key=${btoa(key)}`;
+    return `${this.backend}/del?url=${btoa(this.url)}&key=${btoa(key)}`;
   }
 
   async delete(key) {
@@ -68,7 +70,7 @@ class DB {
   }
 
   _list_url(pfx) {
-    return `/db/lst?url=${btoa(this.url)}&pfx=${btoa(pfx)}`;
+    return `${this.backend}/lst?url=${btoa(this.url)}&pfx=${btoa(pfx)}`;
   }
 
   async list(pfx = "") {
