@@ -1,14 +1,16 @@
 const express = require("express");
-const cors = require('cors');
+const cors = require("cors");
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    'https://replit-database-viewer.luisafk.repl.co',
-    'https://replit.com'
-  ]
-}));
+app.use(
+  cors({
+    origin: [
+      "https://replit-database-viewer.luisafk.repl.co",
+      "https://replit.com",
+    ],
+  })
+);
 app.use(express.static(__dirname + "/public"));
 
 app.get("/db/get", (req, res) => {

@@ -9,7 +9,7 @@ class DB {
   constructor(url = null) {
     if (url) this.setURL(url);
 
-    this.backend = 'https://replit-database-viewer.luisafk.repl.co/db';
+    this.backend = "https://replit-database-viewer.luisafk.repl.co/db";
   }
 
   setURL(url) {
@@ -38,7 +38,9 @@ class DB {
   }
 
   _set_url(key, val) {
-    return `${this.backend}/set?url=${btoa(this.url)}&key=${btoa(key)}&val=${btoa(val)}`;
+    return `${this.backend}/set?url=${btoa(this.url)}&key=${btoa(
+      key
+    )}&val=${btoa(val)}`;
   }
 
   async set(key, val, raw = false) {

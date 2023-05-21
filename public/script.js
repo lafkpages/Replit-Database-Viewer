@@ -20,7 +20,9 @@ const edit_prompt_cancel = edit_prompt.querySelector(
   "button#edit-prompt-cancel"
 );
 
-const isReplitExtension = /^extension-.+\.(repl\.co|replit\.app)$/.test(window.location.hostname)
+const isReplitExtension = /^extension-.+\.(repl\.co|replit\.app)$/.test(
+  window.location.hostname
+);
 
 let db = new DB();
 
