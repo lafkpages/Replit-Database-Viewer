@@ -1,0 +1,13 @@
+# Git
+.git
+
+# NPM
+node_modules
+
+# Google Search Console
+public/google*.html
+
+# Replit
+.config
+.cache
+.breakpoints
