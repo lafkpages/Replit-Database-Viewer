@@ -35,7 +35,9 @@ enter_url_form.addEventListener("submit", (e) => {
   db.setURL(enter_url_inp.value);
 
   // save URL temporarily
-  sessionStorage.setItem("url", enter_url_inp.value);
+  try {
+    sessionStorage.setItem("url", enter_url_inp.value);
+  } catch {}
 
   data_table.textContent = "";
 
@@ -175,12 +177,16 @@ if (parsedUrl.searchParams.has("url")) {
 }
 
 // get DB url from sessionStorage
-else if (sessionStorage.getItem("url")) {
-  // enter URL into input
-  enter_url_inp.value = sessionStorage.getItem("url");
+else {
+  try {
+    if (sessionStorage.getItem("url")) {
+      // enter URL into input
+      enter_url_inp.value = sessionStorage.getItem("url");
 
-  // submit
-  enter_url_subm.click();
+      // submit
+      enter_url_subm.click();
+    }
+  } catch {}
 }
 
 // Login with Replit button
