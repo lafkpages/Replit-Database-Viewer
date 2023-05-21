@@ -25,7 +25,7 @@ let isReplitExtension = /^extension-.+\.repl\.co$/.test(
 );
 
 let db = new DB({
-  replit
+  replit: null
 });
 
 let editing_key = null;
@@ -201,6 +201,10 @@ replit_auth_btn.addEventListener("click", (e) => {
 // Check if is in a Replit Extension
 replit.replDb.get('__replit_database_viewer_ext_check').then(resp => {
   isReplitExtension = typeof resp == 'string';
+
+  if (isReplitExtension) {
+    db.replit = replit;
+  }
 
   console.debug('Is Replit extension:', isReplitExtension);
 });
