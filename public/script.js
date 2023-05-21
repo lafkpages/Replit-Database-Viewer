@@ -199,7 +199,7 @@ replit_auth_btn.addEventListener("click", (e) => {
 });
 
 // Check if is in a Replit Extension
-replit.replDb.get("__replit_database_viewer_ext_check").then((resp) => {
+replit.replDb.get("").then((resp) => {
   isReplitExtension = typeof resp == "string";
 
   if (isReplitExtension) {
