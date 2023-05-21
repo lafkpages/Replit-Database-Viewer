@@ -206,5 +206,8 @@ replit.replDb.get('__replit_database_viewer_ext_check').then(resp => {
     db.replit = replit;
   }
 
+  // reload table
+  enter_url_form.dispatchEvent(new Event("submit"));
+
   console.debug('Is Replit extension:', isReplitExtension);
 });
