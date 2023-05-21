@@ -19,6 +19,11 @@ class DB {
   }
 
   _URLError() {
+    // ignore if we have the Replit Extensions API
+    if (this.replit) {
+      return;
+    }
+
     if (!this.url) throw new DBError(`No URL specified`);
   }
 
@@ -28,6 +33,13 @@ class DB {
 
   async get(key, raw = false) {
     this._URLError();
+
+    if (this.replit) {
+      const raw = await this.replit.replDb.get({
+        key
+      });
+      return raw? raw : JSON.parse(raw);
+    }
 
     let resp = await fetch(this._get_url(key));
 
@@ -48,6 +60,13 @@ class DB {
   async set(key, val, raw = false) {
     this._URLError();
 
+    if (this.replit) {
+      return await this.replit.replDb.set({
+        key,
+        value: val
+      });
+    }
+
     let resp = await fetch(this._set_url(key, raw ? val : JSON.stringify(val)));
 
     if (resp.status == 200) {
@@ -64,6 +83,12 @@ class DB {
   async delete(key) {
     this._URLError();
 
+    if (this.replit) {
+      return await this.replit.replDb.del({
+        key
+      });
+    }
+
     let resp = await fetch(this._delete_url(key));
 
     if (resp.status == 200) {
@@ -79,6 +104,18 @@ class DB {
 
   async list(pfx = "") {
     this._URLError();
+
+    if (this.replit) {
+      const resp = await this.replit.replDb.list({
+        prefix: pfx
+      });
+
+      if (resp.error) {
+        throw new DBError(`Error listing keys via Replit API: ${resp.error}`);
+      }
+
+      return resp.keys;
+    }
 
     let resp = await fetch(this._list_url(pfx));
 
