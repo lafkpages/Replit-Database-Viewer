@@ -14,7 +14,7 @@
   "tools": [
     {
       "name": "Replit Database Viewer",
-      "handler": "/?extension=1",
+      "handler": "/",
       "icon": "favicon96.png"
     }
   ]
