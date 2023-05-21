@@ -6,10 +6,12 @@ class DBError extends Error {
 }
 
 class DB {
-  constructor(url = null) {
-    if (url) this.setURL(url);
+  constructor(opts = {}) {
+    if (opts.url) this.setURL(opts.url);
 
-    this.backend = "https://replit-database-viewer.luisafk.repl.co/db";
+    this.backend = opts.backend || "https://replit-database-viewer.luisafk.repl.co/db";
+
+    this.replit = opts.replit || null;
   }
 
   setURL(url) {
