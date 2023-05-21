@@ -122,7 +122,8 @@ div#edit-prompt button#edit-prompt-ok {
   background: lightskyblue;
 }
 
-.replit-extension #enter-url, .replit-extension button#replitAuthBtn {
+.replit-extension #enter-url,
+.replit-extension button#replitAuthBtn {
   display: none;
 }
 

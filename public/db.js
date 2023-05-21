@@ -9,7 +9,8 @@ class DB {
   constructor(opts = {}) {
     if (opts.url) this.setURL(opts.url);
 
-    this.backend = opts.backend || "https://replit-database-viewer.luisafk.repl.co/db";
+    this.backend =
+      opts.backend || "https://replit-database-viewer.luisafk.repl.co/db";
 
     this.replit = opts.replit || null;
   }
@@ -36,9 +37,9 @@ class DB {
 
     if (this.replit) {
       const raw = await this.replit.replDb.get({
-        key
+        key,
       });
-      return raw? raw : JSON.parse(raw);
+      return raw ? raw : JSON.parse(raw);
     }
 
     let resp = await fetch(this._get_url(key));
@@ -63,7 +64,7 @@ class DB {
     if (this.replit) {
       return await this.replit.replDb.set({
         key,
-        value: val
+        value: val,
       });
     }
 
@@ -85,7 +86,7 @@ class DB {
 
     if (this.replit) {
       return await this.replit.replDb.del({
-        key
+        key,
       });
     }
 
@@ -107,7 +108,7 @@ class DB {
 
     if (this.replit) {
       const resp = await this.replit.replDb.list({
-        prefix: pfx
+        prefix: pfx,
       });
 
       if (resp.error) {
