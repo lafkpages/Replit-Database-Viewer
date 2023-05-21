@@ -1,12 +1,21 @@
 {
   "name": "Replit Database Viewer",
   "description": "View and edit a Repl's database.",
+  "version": "0",
+  "website": "https://replit-database-viewer.luisafk.repl.co",
   "icon": "favicon96.png",
   "longDescription": "View and edit a Repl's database.",
   "coverImages": [
     {
       "path": "replit-db-viewer.png",
       "label": "Replit Database Viewer screenshot"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Replit Database Viewer",
+      "handler": "/?extension=1",
+      "icon": "favicon96.png"
     }
   ]
 }
