@@ -1,5 +1,5 @@
 {
-  "name": "Replit-Database-Viewer-1",
+  "name": "replit-database-viewer",
   "version": "1.0.0",
   "description": "View and edit a Repl's database.",
   "main": "index.js",
