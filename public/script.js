@@ -24,7 +24,9 @@ let isReplitExtension = /^extension-.+\.repl\.co$/.test(
   window.location.hostname
 );
 
-let db = new DB();
+let db = new DB({
+  replit
+});
 
 let editing_key = null;
 let editing = null;
