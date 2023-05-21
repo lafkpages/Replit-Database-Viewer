@@ -92,3 +92,5 @@ run = ["sh", "-c", "node index.js"]
 
 [extension]
 isExtension = true
+outputDirectory = "public"
+extensionID = "59c44b44-c9c1-410d-bdb3-b0f6d1b3832c"
