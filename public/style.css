@@ -123,7 +123,8 @@ div#edit-prompt button#edit-prompt-ok {
 }
 
 .replit-extension #enter-url,
-.replit-extension button#replitAuthBtn {
+.replit-extension button#replitAuthBtn,
+br:first-of-type {
   display: none;
 }
 
