@@ -209,5 +209,8 @@ replit.replDb.get('__replit_database_viewer_ext_check').then(resp => {
   // reload table
   enter_url_form.dispatchEvent(new Event("submit"));
 
+  // hide URL input etc
+  document.body.classList.add('replit-extension');
+
   console.debug('Is Replit extension:', isReplitExtension);
 });

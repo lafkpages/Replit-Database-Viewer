@@ -121,3 +121,11 @@ div#edit-prompt button {
 div#edit-prompt button#edit-prompt-ok {
   background: lightskyblue;
 }
+
+.replit-extension #enter-url {
+  display: none;
+}
+
+.replit-extension table#data {
+  margin-top: 0px;
+}
