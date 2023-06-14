@@ -3,7 +3,7 @@
   "description": "View and edit a Repl's database.",
   "version": "0",
   "website": "https://replit-database-viewer.luisafk.repl.co",
-  "icon": "favicon96.png",
+  "icon": "icon.png",
   "longDescription": "View and edit a Repl's database.",
   "coverImages": [
     {
@@ -15,7 +15,7 @@
     {
       "name": "Replit Database Viewer",
       "handler": "/",
-      "icon": "favicon96.png"
+      "icon": "icon.png"
     }
   ],
   "scopes": [
